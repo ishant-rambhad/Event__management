@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg" style="background-color: #000000;">
+  <div class="container-fluid">
+    <img src="Resources/logo_3.svg" alt="" style="height: 95px; width: 135px;">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <!-- <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <form class="d-flex" role="search" style="flex-grow: 1; max-width: 500px;">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 100%; border-radius: 20px;">
+          <button class="btn btn-outline-light" type="submit" style="border-radius: 20px;">Search</button>
+        </form>
+      </ul> -->
+        <!-- Right-aligned Search Bar -->
+   
+        <!-- <form class="d-flex" role="search" style="margin-right: 15px;">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 300px; border-radius: 50px;">
+      <button class="btn btn-outline-light" type="submit" style="border-radius: 50px;">Search</button>
+    </form> -->
+   
+    <div class="search-container ms-auto">
+      <form class="d-flex">
+        <div class="search-icon">
+          <i class="fas fa-search"></i>
+        </div>
+        <input type="text" class="form-control" placeholder="Search for vendors, venues, etc." id="search-bar" />
+        <button type="submit" class="btn btn-outline-light">Search</button>
+      </form>
+    </div>
+    
+   
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Register
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" routerLink="/Customer-registration" routerLinkActive="active">Register as Customer</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" routerLink="/Vendor-registration" routerLinkActive="active">Register as Vendor</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Login
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" routerLink="/Customer-login" routerLinkActive="active">Login as Customer</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" routerLink="/Vendor-login" routerLinkActive="active">Login as Vendor</a></li>
+        </ul>
+      </li>
+    </ul>
+  
+    </div>
+  </div>
+</nav>

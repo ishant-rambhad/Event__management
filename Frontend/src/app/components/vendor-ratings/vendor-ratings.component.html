@@ -1,0 +1,19 @@
+<app-nav-bar></app-nav-bar>
+<app-vendor-sidebar></app-vendor-sidebar>
+
+<div class="rating-page">
+    <h2>Client Ratings</h2>
+  
+    <div *ngFor="let review of reviews" class="rating-card">
+      <h3>Client: {{ review.client }}</h3>
+      <div class="speedometer" [style.--angle]="review.angle">
+        <div class="gauge">
+          <div class="gauge-background"></div>
+          <div class="gauge-needle" [style.transform]="'rotate(' + review.angle + 'deg)'"></div>
+        </div>
+      </div>
+      <p class="rating">Rating: {{ review.rating }}</p>
+      <p>Comment: "{{ review.comment }}"</p>
+    </div>
+  </div>
+  

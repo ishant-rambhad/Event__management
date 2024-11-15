@@ -1,0 +1,168 @@
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #0f0f0f, #1a1a1a);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add subtle animated background pattern */
+.parent::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(10, 173, 10, 0.1) 0%, transparent 50%);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.container {
+  width: 400px;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 30px 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 25px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  outline: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+.input-box input:focus {
+  border-color: #0AAD0A;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.input-box i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.remember {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  margin: 15px 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.remember label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.remember input[type="checkbox"] {
+  accent-color: #0AAD0A;
+}
+
+.remember a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.remember a:hover {
+  color: #0AAD0A;
+}
+
+.btn {
+  width: 100%;
+  height: 45px;
+  background: #0AAD0A;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background: #089108;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(10, 173, 10, 0.3);
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.register {
+  font-size: 14px;
+  margin-top: 25px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.register p a {
+  font-weight: 600;
+  color: #0AAD0A;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.register p a:hover {
+  color: #089108;
+  text-decoration: underline;
+}
+
+.text-danger {
+  color: #ff4d4d;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-left: 5px;
+}

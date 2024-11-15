@@ -1,0 +1,23 @@
+.container {
+    max-width: 800px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  .cart-item {
+    padding: 10px 0;
+  }
+  
+  input[type='number'] {
+    max-width: 80px;
+  }
+  
+  button {
+    transition: all 0.3s;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+  }
+  

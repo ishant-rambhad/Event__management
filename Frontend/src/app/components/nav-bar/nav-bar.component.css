@@ -1,0 +1,73 @@
+.search-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #1201ff;
+    transition: all 0.3s ease;
+  }
+  
+  .form-control {
+    width: 0;
+    opacity: 0;
+    padding-left: 30px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    border-radius: 20px;
+    border: 1px solid #ffffff;
+  }
+  
+  .search-container:focus-within .form-control {
+    width: 300px; /* Adjust size */
+    opacity: 1;
+  }
+  
+  .search-container:hover .search-icon,
+  .search-container:focus-within .search-icon {
+    transform: translateY(-50%) scale(1.2);
+  }
+  
+  input:focus {
+    border-color: #1201ff;
+    box-shadow: 0 0 5px rgba(18, 1, 255, 0.6);
+  }
+  
+  .dropdown-menu {
+    right: 0;
+    left: auto;
+  }
+  
+  button {
+    border-radius: 20px;
+    border: 1px solid #ffffff; /* Initial border color */
+    color: white; /* Initial text color */
+    background-color: transparent; /* Keeps background transparent */
+    transition: border-color 0.3s ease, color 0.3s ease; /* Smooth transition for color changes */
+  }
+  
+  /* Change border and text color on hover */
+  button:hover {
+    border-color: #1201ff;
+    color: #1201ff;
+  }
+  
+  input::placeholder {
+    color: #ddd;
+    transition: all 0.3s ease;
+  }
+  
+  .search-container .form-control {
+    color: white; /* Sets the font color to white */
+    background-color: transparent; /* Optional: Makes the background transparent */
+    border: 1px solid #1201ff; /* Optional: Adds a border color that complements your theme */
+  }
+  
+  .search-container .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Makes the placeholder text white but slightly transparent */
+  }

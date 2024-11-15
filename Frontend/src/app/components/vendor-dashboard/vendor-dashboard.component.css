@@ -1,0 +1,84 @@
+/* Main Wrapper */
+.dashboard-wrapper {
+  display: flex;
+  height: 100vh;
+  background-color: #f4f7fc;
+}
+
+
+/* Main Content Area */
+.main-content {
+  margin-left: 270px;
+  padding: 20px;
+  width: calc(100% - 270px);
+}
+
+.welcome-section {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.welcome-section h2 {
+  font-size: 24px;
+  color: #2c3e50;
+}
+
+.business-info,
+.service-management,
+.revenue-rating,
+.recent-bookings {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 20px;
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+.info-group p,
+.performance-details p,
+.booking-card p {
+  font-size: 16px;
+  color: #7f8c8d;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.status span {
+  font-size: 16px;
+  color: #2ecc71; /* Green for Available */
+}
+
+.status span strong {
+  color: #e74c3c; /* Red for Busy */
+}
+
+.service-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.booking-card {
+  padding: 15px;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}

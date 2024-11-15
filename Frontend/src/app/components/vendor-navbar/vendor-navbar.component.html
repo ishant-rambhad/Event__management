@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg" style="background-color: #000000;">
+    <div class="container-fluid">
+        <img src="Resources/logo_3.svg" alt="" style="height: 95px; width: 135px;">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+            <div class="search-container ms-auto">
+                <form class="d-flex">
+                    <div class="search-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Search for vendors, venues, etc." id="search-bar" />
+                    <button type="submit" class="btn btn-outline-light">Search</button>
+                </form>
+            </div>
+            <ul class="navbar-nav ms-auto">
+                <!-- Profile image dropdown (no arrow) -->
+                <li class="nav-item dropdown">
+                    <!-- Profile image triggers the dropdown -->
+                    <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="Resources/user.png" class="card-img-top custom-card-img" alt="Profile" style="width:35px; height:35px;">
+                    </a>
+                    <!-- Dropdown menu -->
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li><a class="dropdown-item" routerLink="/profile">Profile</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" routerLink="/settings">Settings</a></li>
+                      <li><a class="dropdown-item" routerLink="/logout">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

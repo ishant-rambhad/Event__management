@@ -1,0 +1,146 @@
+.carousel-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%; /* Full width of the page */
+}
+
+.custom-card-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; /* Horizontal scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling effect */
+  padding: 10px;
+  width: 100%;
+}
+.card {
+  width: 22rem; /* Larger card width */
+  flex-shrink: 0; /* Prevent cards from shrinking */
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  position: relative; /* For absolute positioning of the overlay */
+}
+
+.custom-card-img {
+  width: 100%;
+  height: 250px;
+  opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  object-fit: cover; /* Ensure the image covers the card */
+}
+
+.custom-card-img::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%; /* Adjust the height for the darkness */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+  pointer-events: none; /* Ensure it doesn't interfere with other elements */
+}
+
+.card:hover .custom-card-img {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Navigation arrows styling */
+.arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 2rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+}
+
+.left-arrow {
+  left: 0;
+}
+
+.right-arrow {
+  right: 0;
+}
+
+
+  .how-it-works-container {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+  }
+  
+  .how-it-works-container header h1 {
+    font-size: 38px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .how-to-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .how-to-list li {
+    flex: 1 1 20%;
+    max-width: 200px;
+    margin: 20px 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .step-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+  }
+  
+  .step-title {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .how-to-list p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .carousel-text-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    text-align: center;
+    z-index: 10;
+}
+/* Bottom gradient for carousel images */
+.carousel-inner .carousel-item img {
+    position: relative;
+    object-fit: cover;
+}
+.carousel-inner .carousel-item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 70%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+}

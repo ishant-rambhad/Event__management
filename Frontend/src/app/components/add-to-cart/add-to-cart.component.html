@@ -1,0 +1,33 @@
+<!-- src/app/add-to-cart/add-to-cart.component.html -->
+<div class="cart-page">
+  <h1 class="cart-title">Available Services </h1>
+
+  <div class="cart-items">
+    <div *ngFor="let item of cartItems" class="cart-item">
+      <div class="item-image">
+        <img [src]="item.photoUrl" alt="Service Image"> <!-- Replace with actual image property -->
+      </div>
+      <!-- Quantity Input -->
+        <div class="col-3">
+          <input
+            type="number"
+            min="0"
+            class="form-control bg-dark text-white"
+          />
+        </div>
+      <div class="item-details">
+        <h2 class="item-name">{{ item.category }}</h2>
+        <p class="item-price">₹{{ item.price }}</p>
+        <p>Quantity: {{ item.quantity }}</p>
+        <button
+        class="btn btn-primary"
+        style="width: 170px;"
+        (click)="addToCart(item)"
+      >
+        Add to Cart
+      </button>
+            </div>
+    </div>
+  </div>
+
+ 

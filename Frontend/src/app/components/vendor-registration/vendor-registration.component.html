@@ -1,0 +1,136 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="signup-card">
+    <h1>
+      @if ({msg}) {
+        {{msg}}
+      }
+    </h1>
+  
+    <div class="card-title">
+      <h1>Create Account</h1>
+      <span>Already have an account? <a routerLink="/Vendor-login">Sign In</a></span>
+    </div>
+  
+    <form class="form-group" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+  
+      <input type="text" name="name" placeholder="Name" formControlName="name">
+      <div class="text-danger">
+        @if (signupForm.controls['name'].touched && signupForm.controls['name'].errors?.['required']) {
+          <span>This is required</span>
+        }
+      </div>
+  
+      <!-- Additional Fields -->
+      <input type="text" name="profileImage" placeholder="Profile Image URL" formControlName="profileImage">
+      <div class="text-danger">
+        @if (signupForm.controls['profileImage'].touched && signupForm.controls['profileImage'].errors?.['required']) {
+          <span>This is required</span>
+        }
+      </div>
+  
+      <input type="text" name="username" placeholder="username" formControlName="username">
+      <div class="text-danger">
+        @if (signupForm.controls['username'].touched && signupForm.controls['username'].errors?.['required']) {
+          <span>This is required</span>
+        }
+      </div>
+  
+      <input type="number" name="age" placeholder="Age" formControlName="age">
+      <div class="text-danger">
+        @if (signupForm.controls['age'].touched && signupForm.controls['age'].errors?.['required']) {
+          <span>This is required</span>
+        }
+      </div>
+  
+      <input type="date" name="dateOfBirth" placeholder="Date of Birth" formControlName="dateOfBirth">
+      <div class="text-danger">
+        @if (signupForm.controls['dateOfBirth'].touched && signupForm.controls['dateOfBirth'].errors?.['required']) {
+          <span>This is required</span>
+        }
+      </div>
+  
+      <input type="email" name="email" placeholder="Email" formControlName="email">
+      <div class="text-danger">
+        @if (signupForm.controls['email'].touched && signupForm.controls['email'].errors?.['required']) {
+          <span>This is required</span>
+        }
+      </div>
+  
+      <input type="text" name="category" placeholder="Category" formControlName="category">
+      <div class="text-danger">
+        @if (signupForm.controls['category'].touched && signupForm.controls['category'].errors?.['required']) {
+          <span>This is required</span>
+        }
+      </div>
+  
+      <input type="text" name="mobileNumber" placeholder="Mobile Number" formControlName="mobileNumber">
+      <div class="text-danger">
+        @if (signupForm.controls['mobileNumber'].touched && signupForm.controls['mobileNumber'].errors?.['required']) {
+          <span>This is required</span>
+        }
+      </div>
+  
+      <input type="text" name="identityProof" placeholder="Identity Proof Type" formControlName="identityProof">
+      <div class="text-danger">
+        @if (signupForm.controls['identityProof'].touched && signupForm.controls['identityProof'].errors?.['required']) {
+          <span>This is required</span>
+        }
+      </div>
+  
+      <input type="text" name="identityProofNumber" placeholder="Identity Proof Number" formControlName="identityProofNumber">
+      <div class="text-danger">
+        @if (signupForm.controls['identityProofNumber'].touched && signupForm.controls['identityProofNumber'].errors?.['required']) {
+          <span>This is required</span>
+        }
+      </div>
+  
+      <input type="text" name="typeOfService" placeholder="Type of Service" formControlName="typeOfService">
+      <div class="text-danger">
+        @if (signupForm.controls['typeOfService'].touched && signupForm.controls['typeOfService'].errors?.['required']) {
+          <span>This is required</span>
+        }
+      </div>
+  
+      <input type="text" name="gstNumber" placeholder="GST Number" formControlName="gstNumber">
+      <div class="text-danger">
+        @if (signupForm.controls['gstNumber'].touched && signupForm.controls['gstNumber'].errors?.['required']) {
+          <span>This is required</span>
+        }
+      </div>
+  
+      <input type="password" name="password" placeholder="Password" formControlName="password">
+      <div class="text-danger">
+        @if (signupForm.controls['password'].touched && signupForm.controls['password'].errors?.['required']) {
+          <span>This is required</span>
+        }
+      </div>
+  
+      <input type="password" name="confirmPassword" placeholder="Confirm Password" formControlName="confirmPassword">
+      <div class="text-danger">
+        @if (signupForm.controls['confirmPassword'].touched && signupForm.controls['confirmPassword'].errors?.['required']) {
+          <span>This is required</span>
+        }
+      </div>
+  
+      <input type="submit" [disabled]="!signupForm.valid" value="Signup">
+    </form>
+  
+    <div class="card-terms">
+      <input type="checkbox"> <span>I have read and agree to the <a href="">Terms of Service</a></span>
+    </div>
+  </div>
